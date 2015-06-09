@@ -1,0 +1,7 @@
+name             'bitmonk_kafka'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures bitmonk_kafka'
+long_description 'Installs/Configures bitmonk_kafka'
+version          '0.1.0'
