@@ -6,3 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+include_recipe 'zookeeper'
+include_recipe 'apache_kafka'

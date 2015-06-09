@@ -1,7 +1,10 @@
 name             'bitmonk_kafka'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Justin Alan Ryan'
+maintainer_email 'bitmonk@icloud.com'
 license          'All rights reserved'
 description      'Installs/Configures bitmonk_kafka'
 long_description 'Installs/Configures bitmonk_kafka'
 version          '0.1.0'
+
+depends 'apache_kafka'
+depends 'zookeeper'
