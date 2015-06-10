@@ -8,4 +8,5 @@
 #
 
 include_recipe 'zookeeper'
+include_recipe 'zookeeper::service'
 include_recipe 'apache_kafka'
