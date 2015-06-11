@@ -9,8 +9,8 @@ Vagrant.require_version '>= 1.5.0'
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   (1..3).each do |i|
-    config.vm.define "bitmonk-kafka-berkshelf#{i}" do |s|
-      s.vm.hostname = "bitmonk-kafka-berkshelf#{i}"
+    config.vm.define "kafka#{i}" do |s|
+      s.vm.hostname = "kafka#{i}"
       s.vm.network "private_network", ip: "10.40.3.#{4-i}0", netmask: "255.255.255.0", virtualbox__intnet: "servidors", drop_nat_interface_default_route: true
 
       # Enabling the Berkshelf plugin. To enable this globally, add this configuration
