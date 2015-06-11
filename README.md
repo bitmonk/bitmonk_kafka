@@ -1,5 +1,7 @@
 # bitmonk_kafka-cookbook
 
+[![Join the chat at https://gitter.im/bitmonk/bitmonk_kafka](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bitmonk/bitmonk_kafka?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 TODO: Enter the cookbook description here.
 
 ## Supported Platforms
