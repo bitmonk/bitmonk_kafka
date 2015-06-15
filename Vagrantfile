@@ -8,6 +8,10 @@ Vagrant.require_version '>= 1.5.0'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
+zero = 0
+one = 1
+two = 2
+
   (1..3).each do |i|
     config.vm.define "kafka#{i}" do |s|
       s.vm.hostname = "kafka#{i}"
@@ -19,6 +23,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       config.vm.provision :chef_solo do |chef|
         chef.json = {
+          apache_kafka: {
+            broker: {
+              "id" => "#{i+1}"
+            }
+          },
+          zookeeper: {
+            config: {
+              clientPort: 2181,
+              dataDir: '/var/lib/zookeeper',
+              tickTime: 2000,
+              initLimit: 5,
+              syncLimit: 2,
+              maxClientCxns: 0,
+              server: {
+                "1" => '10.40.3.30:2888:3888',
+                "2" => '10.40.3.20:2888:3888',
+                "3" => '10.40.3.10:2888:3888'
+              }
+            }
+          },
           mysql: {
             server_root_password: 'rootpass',
             server_debian_password: 'debpass',
