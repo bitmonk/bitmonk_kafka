@@ -1,10 +1,11 @@
 # bitmonk_kafka-cookbook
 
-TODO: Enter the cookbook description here.
+This is an example wrapper cookbook for the apache_kafka community cookbook.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+This is currently tested against Ubuntu 14.04 LTS, but is intended to be
+cross-platform.
 
 ## Attributes
 
@@ -16,16 +17,19 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['bitmonk_kafka']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['apache_kafka']['install_scripts']</tt></td>
+    <td>list of strings</td>
+    <td>the names of scripts to install to /usr/local/kafka/bin from the kafka
+        distribution's 'bin' dir.</td>
+    <td><tt>(default is all of the scripts at time of writing)</tt></td>
   </tr>
 </table>
 
 ## Usage
 
 ### bitmonk_kafka::default
+
+This configures a kafka node with a local zookeeper.
 
 Include `bitmonk_kafka` in your node's `run_list`:
 
@@ -39,4 +43,4 @@ Include `bitmonk_kafka` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Justin Alan Ryan (<bitmonk@icloud.com>)
