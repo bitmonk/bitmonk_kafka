@@ -9,9 +9,12 @@
 
 include_recipe 'zookeeper'
 
+node_id = node["apache_kafka"]["broker.id"]
+
 file '/var/lib/zookeeper/myid' do
-  content "#{node.apache_kafka.broker.id}"
+  content "#{node_id}"
 end
 
 include_recipe 'zookeeper::service'
 include_recipe 'apache_kafka'
+

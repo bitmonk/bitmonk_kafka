@@ -24,9 +24,7 @@ two = 2
       config.vm.provision :chef_solo do |chef|
         chef.json = {
           apache_kafka: {
-            broker: {
-              "id" => "#{i+1}"
-            }
+            "broker.id" =>  "#{i}"
           },
           zookeeper: {
             config: {
