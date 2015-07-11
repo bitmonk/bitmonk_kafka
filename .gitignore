@@ -18,3 +18,9 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
+
+.Python
+*.pyc
+lib
+include
+pip-selfcheck.json
