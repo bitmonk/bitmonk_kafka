@@ -15,7 +15,7 @@ two = 2
   (1..3).each do |i|
     config.vm.define "kafka#{i}" do |s|
       s.vm.hostname = "kafka#{i}"
-      s.vm.network "private_network", ip: "10.40.3.#{4-i}0", netmask: "255.255.255.0", virtualbox__intnet: "servidors", drop_nat_interface_default_route: true
+      s.vm.network "private_network", ip: "10.40.3.#{4-i}0", netmask: "255.255.255.0"
 
       # Enabling the Berkshelf plugin. To enable this globally, add this configuration
       # option to your ~/.vagrant.d/Vagrantfile file

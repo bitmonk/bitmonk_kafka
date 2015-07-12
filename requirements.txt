@@ -1,0 +1,4 @@
+Fabric
+fabtools
+git+https://github.com/bitmonk/bitmonk.deploy.git
+
